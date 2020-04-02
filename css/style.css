@@ -115,11 +115,11 @@ nav {
 	cursor: pointer;
 	order: 2;
 }
-.menu li {
+.row__menu li {
 	display: inline-block;
 	width: 12.28%;
 }
-.menu a {
+.row__menu a {
 	/*display: block;*/
 	padding: 7px 10px;
 	border: 1px;
@@ -130,18 +130,18 @@ nav {
 	text-align: center;
 	color: #a4aead;
 }
-.menu li > a:visited {
+.row__menu li > a:visited {
 	border: 1px solid #a4aead;
 	border-radius: 5px;
 	color: #a4aead;
 }
-.menu li > a:hover {
+.row__menu li > a:hover {
 	border: 1px solid #a4aead;
 	border-radius: 5px;
 	color: #a4aead;
 
 }
-.menu li > a:active {
+.row__menu li > a:active {
 	border: 1px solid #23b7a4;
 	border-radius: 5px;
 	color: #23b7a4;
