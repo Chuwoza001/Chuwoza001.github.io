@@ -92,14 +92,14 @@ p {
 	width: 100%;
 	position:relative;
 }
-[class*="col-"] {
+/*[class*="col-"] {
 	float: left;
-}
-.row:after,.menu:after,.submenu:after {
+}*/
+/*.row:after,.menu:after,.submenu:after {
 	content: "";
 	display: block;
 	clear: both;
-}
+}*/
 
 /*Вопрос: Как правильно сделать? 
 Eсли все должно быть посередине, а ширина блока 80рх*/
@@ -120,13 +120,12 @@ header {
 	flex: 3 0 auto;
 	cursor: pointer;
 	order: 1;
-	text-transform: uppercase; /* Заглавные буквы */
-	font-weight: bold;
-	padding-left: auto;
 }
-.logo > a {
+
+/*.logo > a {
 	display: block;
-}	
+}	*/
+
 nav {
 	flex: 6 0 auto;
 	cursor: pointer;
@@ -163,7 +162,7 @@ nav {
 	border-radius: 5px;
 	color: #23b7a4;
 }
-.search__button{
+.input__search {
 	flex: 1 0 auto;
 	cursor: pointer;
 	order:3;
@@ -179,6 +178,8 @@ nav {
 	border:1px solid #a4aead;
 	border-radius: 5px;
 	outline: none;
+/*	font-size: 21px;
+    font-weight: 100;*/
 	color: #a4aead;
 	background: transparent;
 }
@@ -189,7 +190,7 @@ nav {
 	width: 20px;
 	height: 20px;
 	border: none;
-	background: url(img/search.png) no-repeat 50% 50%;
+	background: url(../img/search.png) no-repeat 50% 50%;
 }
 
 /*Вопрос: узнать что это?*/
@@ -199,11 +200,11 @@ nav {
 }*/
 .search input::-webkit-input-placeholder {
 	color: #a4aead;
-	text-transform: uppercase;
+	text-transform: uppercase; /*Заглавные буквы */
 	font-size: 14px;
 }
 #slider {
-	background: url(img/img2.png) no-repeat 50% 50%;
+	background: url(../img/img2.png) no-repeat;
 }
 .slider__box {
 	display: flex;
