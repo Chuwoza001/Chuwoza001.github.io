@@ -57,16 +57,17 @@ p {
 	min-height: 100%;  /* Чтобы данный контейнер был на всю высоту экрана*/
 	overflow:hidden;   /*Чтобы ничего не вылезло за экран*/
 	display: flex;
-	flex-direction: column;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
 	}
 .container {
 	flex:1 1 auto;
 	width: 1170px;
 	margin: 0 auto;
+	z-index: 200;
 }
 .row {
-	display: flex;
-	justify-content: space-between;
+/*	display: flex;*/
 }
 .col-md-1 {
 	width: 8.333%;
@@ -134,6 +135,7 @@ header {
 	flex: 3 0 auto;
 	cursor: pointer;
 	order: 1;
+	margin-right: auto;
 }
 
 /*.logo > a {
@@ -258,7 +260,7 @@ nav {
 	line-height: 26px;
 	color: #ccd0d7;
 }
-.slider_bottom {
+.slider_botton {
 	padding: 45px 0;
 }
 .button1 {
@@ -346,12 +348,19 @@ nav {
 } 
 .row__team {
 	display: flex;
+	justify-content: space-between;
+}
+.team__block {
+	display: flex;
 	width: 263px;
 	height: 375px;
 	flex-direction:column;
 	margin-bottom: 100px;
 	background-color: #e1e6ea;
 }
+
+ /*Здесь сделать ХОВЕРРРРРРРРРРРРРРРРРРРРРРРРРРРРРРРРРРРРРРРРРР*/
+
 /*.row__team:hover {
 	background-color: #3a454d;
 	cursor:pointer;
@@ -394,16 +403,94 @@ nav {
 .team_vacance {
 
 }
+.dark__block {
+	background-color: #3a454d;
+}
+.dark__title {
+	color: #fff;
+}
+
+.row__galery {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+.galery__foto {
+	width: 32%;
+	text-align: center;
+	margin: 20px  -10px;
+}
+/*.block_foto {
+	margin-bottom: 20px;
+}*/
+.slider_botton_1 {
+	padding: 40px 0 60px 0;
+}
+.button2 {
+	height: 45px;
+	width: 150px;
+	margin: 0 6px;
+	color: #fff;
+	text-align: center;
+	text-transform:uppercase;
+	font-size:14px;
+	font-family: 'QuattrocentoSans-Bold';
+	border:2px solid #fff;
+	border-radius:5px;
+	background:transparent;
+}
+.button2:hover {
+	color:#fff;
+	background-color: #23b7a4;
+	cursor: pointer;
+}
+
+                                                /*container "TOOL"*/
 
 
+.row__tool {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+.tool__block {
+	display: flex;
+	flex-flow: column wrap;
+	width: 25%;
+	text-align: center;
+	padding: 0 15px 67px 15px;
+}
+.tool__pic {
+	padding: 30px 0;
+}
+.tool__name {
+	padding-bottom: 32px;
+}
+.row__features {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+.features__block {
+	display: flex;
+	flex-flow: column wrap;
+	width: 33.3333334%;
+	padding: 0 15px 125px 15px;
+}
+.features__title {
+	padding-top: 55px; 
+}
+.features__text {
+	padding-top: 33px;
+}
 
 
-
-
-
-
-
-
+.map__block {
+	height: 865px;
+	padding: 160px 0 80px 0;
+	background: url(../img/img1.png) no-repeat center top / cover;
+	z-index: 100;
+}
 
 
 
