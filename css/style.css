@@ -40,7 +40,8 @@ h3{
 	font-weight: 500;
 }
 h4{
-	font-size: 20px;
+	font-family: 'QuattrocentoSans-Bold';
+	font-size: 16px;
 	font-weight: 300;
 	color:#fff;
 }
@@ -62,6 +63,9 @@ p {
 	flex:1 1 auto;
 	width: 1170px;
 	margin: 0 auto;
+}
+.row {
+	display: flex;
 }
 .col-md-1 {
 	width: 8.333%;
@@ -253,10 +257,13 @@ nav {
 	line-height: 26px;
 	color: #ccd0d7;
 }
+.slider_bottom {
+	padding: 45px 0;
+}
 .button1 {
 	height: 45px;
 	width: 125px;
-	margin: 45px 6px;
+	margin: 0 6px;
 	color: #fff;
 	text-align: center;
 	text-transform:uppercase;
@@ -266,7 +273,11 @@ nav {
 	border-radius:5px;
 	background:transparent;
 }
-
+.button1:hover {
+	color:#fff;
+	background-color: #23b7a4;
+	cursor: pointer;
+}
 #container__modest {
 	border-bottom: 1px solid #dde1e4;
 }
@@ -332,7 +343,56 @@ nav {
 .tagline__b .block__pic {
 	flex: 0 0 auto;
 } 
+.row__team {
+	display: flex;
+	width: 263px;
+	height: 375px;
+	flex-direction:column;
+	margin-bottom: 100px;
+	background-color: #e1e6ea;
+}
+/*.row__team:hover {
+	background-color: #3a454d;
+	cursor:pointer;
+}*/
+.grafic__foto > a {
+	opacity: 0;
+	transition: .5s ease;
+}
+.team__foto:hover a {
+	opacity: 1;
+ 	background: rgba(0, 0, 0, 0.5);
+  	cursor: pointer;
+}
+.team__foto {
+	width: 263px;
+	height: 300px;
+	text-align: center;
+	z-index: 10;
+}
+.team__foto:hover a{
+	opacity:1;
+	background: rgba(255,255,255,0.5);
+	z-index: 20;
+	cursor:pointer;
+}
+.team__foto > img {
+	vertical-align: middle;
+}
+.team__info {
+	width: 263px;
+	height: 75px;
+	padding: 0 0 20px 20px;
+}
 
+.team_name h4 {
+	padding-top: 20px;
+	color:#292f36;
+	text-transform:uppercase;
+}
+.team_vacance {
+
+}
 
 
 
