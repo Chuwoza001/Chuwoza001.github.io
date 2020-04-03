@@ -66,6 +66,7 @@ p {
 }
 .row {
 	display: flex;
+	justify-content: space-between;
 }
 .col-md-1 {
 	width: 8.333%;
