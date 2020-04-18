@@ -21,9 +21,16 @@
 body {
 	font-family: 'Open Sans';
 	margin: 0 auto;
-	/*background-repeat: no-repeat;*/
 }
 h1 {
+	font-family: 'QuattrocentoSans-Bold';
+	font-size: 36px;
+	font-weight: 500;
+	text-transform: uppercase; 
+	border-left: 10px solid #e1e6ea;
+	padding-left: 14px;
+}
+.h1 {
 	font-family: 'QuattrocentoSans-Bold';
 	font-size: 36px;
 	font-weight: 500;
@@ -43,32 +50,24 @@ h4{
 	font-family: 'QuattrocentoSans-Bold';
 	font-size: 16px;
 	font-weight: 300;
-	color:#fff;
+	text-transform:uppercase;
+	color:#292f36;
 }
 p {
 	font-family: 'Open Sans';
 	font-size: 16px;
-/*	font-style: normal;*/
 	line-height: 26px;
 	color:#8d8f92;
 }
-
-.flax__container {
-	min-height: 100%;  /* Чтобы данный контейнер был на всю высоту экрана*/
-	overflow:hidden;   /*Чтобы ничего не вылезло за экран*/
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: flex-start;
-	}
+section {
+	/*margin-top: 87px;*/
+}
 .container {
-	flex:1 1 auto;
 	width: 1170px;
 	margin: 0 auto;
-	z-index: 200;
 }
-.row {
-/*	display: flex;*/
-}
+.row {float: left;}
+
 .col-md-1 {
 	width: 8.333%;
 	position:relative;
@@ -101,18 +100,25 @@ p {
 	width: 75%;
 	position:relative;
 }
+.col-md-10 {
+	width: 83.333334%;
+	position:relative;
+}
 .col-md-12 {
 	width: 100%;
 	position:relative;
 }
-/*[class*="col-"] {
+
+[class*="col-"] {
 	float: left;
-}*/
-/*.row:after,.menu:after,.submenu:after {
+}
+.row:after,
+.menu:after,
+.submenu:after {
 	content: "";
 	display: block;
 	clear: both;
-}*/
+}
 
 /*Вопрос: Как правильно сделать? 
 Eсли все должно быть посередине, а ширина блока 80рх*/
@@ -138,22 +144,18 @@ header {
 	margin-right: auto;
 }
 
-/*.logo > a {
-	display: block;
-}	*/
-
 nav {
 	flex: 3 0 auto;
 	cursor: pointer;
 	order: 2;
 }
 
-.row__menu li {
+.menu li {
 	display: inline-block;
 	width: 12.28%;
 }
 
-.row__menu a {
+.menu a {
 	/*display: block;*/
 	padding: 7px 10px;
 	border: 1px;
@@ -165,23 +167,22 @@ nav {
 	color: #a4aead;
 }
 
-.row__menu li > a:visited {
+.menu li > a:visited {
 	border: 1px solid #a4aead;
 	border-radius: 5px;
 	color: #a4aead;
 }
 
-.row__menu li > a:hover {
-	border: 1px solid #a4aead;
-	border-radius: 5px;
-	color: #a4aead;
-
-}
-
-.row__menu li > a:active {
+.menu li > a:hover {
 	border: 1px solid #23b7a4;
 	border-radius: 5px;
 	color: #23b7a4;
+}
+
+.menu li > a:active {
+	border: 1px solid  #5dde1b;
+	border-radius: 5px;
+	color: #5dde1b;
 }
 
 .input__search {
@@ -286,10 +287,7 @@ nav {
 }
 
 .title__all {
-	border-left: 10px solid #e1e6ea;
-	padding-left: 14px;
-	margin-top: 87px;
-	margin-bottom: 67px;
+	padding: 87px 0 67px 0;
 }
 .row__caption {
 	display: flex;
@@ -340,68 +338,50 @@ nav {
 .container__icon a img {
 	vertical-align: middle;
 }
+
+
 .tagline__b {
 	display: flex;
 }
 .tagline__b .block__pic {
 	flex: 0 0 auto;
 } 
-.row__team {
-	display: flex;
-	justify-content: space-between;
-}
-.team__block {
-	display: flex;
-	width: 263px;
-	height: 375px;
-	flex-direction:column;
-	margin-bottom: 100px;
-	background-color: #e1e6ea;
-}
 
  /*Здесь сделать ХОВЕРРРРРРРРРРРРРРРРРРРРРРРРРРРРРРРРРРРРРРРРРР*/
 
-/*.row__team:hover {
-	background-color: #3a454d;
-	cursor:pointer;
-}*/
-.grafic__foto > a {
-	opacity: 0;
-	transition: .5s ease;
+
+.team-container {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 100px;
 }
-.team__foto:hover a {
-	opacity: 1;
- 	background: rgba(0, 0, 0, 0.5);
-  	cursor: pointer;
+.team__block {
+	display: flex;
+	width: 265px;
+	height: 375px;
+	flex-direction:column;
+	background-color: #e1e6ea;
 }
+
 .team__foto {
-	width: 263px;
+	width: 265px;
 	height: 300px;
 	text-align: center;
 	z-index: 10;
 }
-.team__foto:hover a{
-	opacity:1;
-	background: rgba(255,255,255,0.5);
-	z-index: 20;
-	cursor:pointer;
-}
+
 .team__foto > img {
 	vertical-align: middle;
+	z-index: 10;
 }
 .team__info {
-	width: 263px;
+	width: 265px;
 	height: 75px;
-	padding: 0 0 20px 20px;
+	padding: 20px 20px 0;
 }
-
-.team_name h4 {
-	padding-top: 20px;
-	color:#292f36;
-	text-transform:uppercase;
-}
-.team_vacance {
-
+.team_vacance p {
+	padding-top: 12px;
+	line-height: 12px;
 }
 .dark__block {
 	background-color: #3a454d;
@@ -409,6 +389,38 @@ nav {
 .dark__title {
 	color: #fff;
 }
+.team__hiden {
+	display: none;
+	position: absolute;
+	width: 265px;
+	height: 300px;
+	background: rgba(255,255,255,0.5);
+	z-index: 100;
+}
+.team__hiden a {
+	display: inline-block;
+	width:50px;
+	height:50px;
+	text-align: center;
+	line-height:52px;
+	background-color: #3a454d;
+}
+
+.team__block:hover {
+	background-color: #3a454d;
+}
+.team__block:hover .team__hiden {
+	display: block;
+}
+.team__block:hover .team_name h4,
+.team__block:hover .team_vacance p{
+	color: #d7d8d9;
+}
+.hidden_icon {
+	display: inline-block;
+	margin: 45% 20%;
+}
+/*  =====   */ 
 
 .row__galery {
 	display: flex;
@@ -444,6 +456,22 @@ nav {
 	background-color: #23b7a4;
 	cursor: pointer;
 }
+.button3 {
+	height: 45px;
+	width: 150px;
+	margin: 0 ;
+	color: #fff;
+	text-align: center;
+	text-transform:uppercase;
+	font-size:14px;
+	font-family: 'QuattrocentoSans-Bold';
+	border:2px solid #fff;
+	border-radius:5px;
+	background:transparent;
+	background-color: #23b7a4;
+	cursor: pointer;
+}
+
 
                                                 /*container "TOOL"*/
 
@@ -484,42 +512,145 @@ nav {
 	padding-top: 33px;
 }
 
-
-.map__block {
-	height: 865px;
-	padding: 160px 0 80px 0;
+.feedback__block {
+/*	height:800px;*/
+	margin-bottom: 70px;
+}
+.feedback__map {
+	height:345px;
 	background: url(../img/img1.png) no-repeat center top / cover;
-	z-index: 100;
+}
+.feedback__block__info {
+	height: 365px;
+}
+.feedback__info {
+	margin-top: 60px;
+	padding-bottom: 30px; 
+	border-bottom: 1px solid red;
+}
+.feedback__title {
+	flex-shrink: 0;
+	font-family: 'QuattrocentoSans-Bold';
+	font-size: 20px;
+	font-weight:500;
+	text-transform:uppercase;
+	margin: 0 10px;
+}
+.feedback__contact { 
+	display: flex;
+	align-items: center;
+	flex-wrap: nowrap;
 }
 
+.feedback__contact:before,
+.feedback__contact:after {
+	content: '';
+	height: 1px;
+	width: 100%;
+	display: inline-block;
+	position: relative;
+	background-color: red;
+}
+.feedback__text{
+	padding: 42px 5px 0 5px;
+	line-height: 26px;
+}
 
+/*============================= form ==============*/
+
+.feedback_form {
+	position: absolute;
+	left: 0;
+	top:-130px;
+	padding: 30px;
+	background-color: #fff;
+}
+#userMassage {
+	position: relative;
+	width: 100%;
+	height: 400px;
+}
+/*.form_text {
+	margin-bottom: 30px;
+}*/
+.feedback_username {
+	display: inline-block;
+	width: 49%;
+}
+.feedback_username input {
+	box-sizing: border-box;
+	width: 100%;
+	height: 45px;
+	border:0;
+	margin: 10px 0 30px 3px;
+	padding-left: 10px;
+	background-color: #eaeef1;
+}
+.form_title {
+	font-family: 'QuattrocentoSans-Bold';
+	font-size: 14px;
+	font-weight: 300;
+	text-transform:uppercase;
+	color:#8d8f92;
+	padding: 30px 0 0 6px;
+}
+textarea {
+	width: 100%;
+	margin-top: 10px;
+	background-color: #eaeef1;
+}
+
+[form*="userMassage"] {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
 
 .footer {
-background-color: #3a454d;
-}
-.footer__row {
-	display: flex;
-	justify-content:space-between;
-	align-items:center;
 	height:95px;
+	line-height: 95px;
+	background-color: #3a454d;
 }
 .footer__text {
+	font-family: 'Open Sans';
 	font-size:14px;
-	letter-spacing: 0.3px;
+	color:#f5f6f6;
 }
-.footer__text p {
-	color:#fff;
+.foot__icon {
+	width: 20%;
 }
-.footer__icon {
-	display: inline-flex;
-	margin: 0 -5px;
-}
-.footer__icon a {
+.foot__icon < a {
 	height: 48px;
-	width: 40px;
+	width: 48px;
 	text-align: center;
 }
-.foot_icon_1 {
-	display: block;
-	background: url(../img/icon_19.png) no-repeat ;
+/* =============================================Пробую вставить спрайт========================================================= */
+.sprite-icon {
+	background: url(../img/sprite/sprites.png) no-repeat;
+    display: block;
+}
+.icon-bh {
+	width: 48px;
+    height: 48px;
+    background-position: 0 0px ;
+}
+.icon-db {
+	width: 48px;
+    height: 48px;
+    background-position: 0 -50px ;
+}
+.icon-gg {
+	width: 48px;
+    height: 48px;
+    background-position: 0 -100px ;
+}
+.icon-tt {
+	width: 48px;
+    height: 48px;
+    background-position: 0 -150px ;
+}
+.icon-fb {
+	width: 48px;
+    height: 48px;
+    background-position: 0 -200px ;
 }
