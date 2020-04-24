@@ -152,6 +152,7 @@ nav {
 .menu li {
   display: inline-block;
   width: 12.28%;
+  transition: 1s;
 }
 
 .menu a {
@@ -165,6 +166,9 @@ nav {
   text-align: center;
   color: #a4aead;
 }
+.menu li:hover {
+  transform: scale(1.2);
+}
 
 .menu li > a:visited {
   border: 1px solid #a4aead;
@@ -176,6 +180,7 @@ nav {
   border: 1px solid #23b7a4;
   border-radius: 5px;
   color: #23b7a4;
+  /* transform: scale(1.1); */
 }
 
 .menu li > a:active {
@@ -328,7 +333,7 @@ nav {
 .container__icon {
   display: inline-flex;
 }
-.container__icon a {
+.container__icon__link {
   display: block;
   width: 60px;
   height: 60px;
@@ -336,16 +341,30 @@ nav {
   line-height: 52px;
   background-color: #c8cdd0;
   border: 1px solid #fff;
+  transition: 0.3s;
 }
 .container__icon a img {
   vertical-align: middle;
 }
-
+.container__icon__link:hover {
+  background-color: #44e2d2;
+  transform: scale(1.1);
+}
 .tagline__b {
   display: flex;
 }
 .tagline__b .block__pic {
   flex: 0 0 auto;
+}
+
+/* анимация иконок соц.сетей  */
+
+.hidden_icon_link:hover .grafic_logo {
+  background-color: #44e2d2;
+  transform: scale(1.2);
+}
+.grafic_logo {
+  transition: 0.5s;
 }
 
 /*Здесь сделать ХОВЕРРРРРРРРРРРРРРРРРРРРРРРРРРРРРРРРРРРРРРРРРР*/
@@ -390,7 +409,9 @@ nav {
   color: #fff;
 }
 .team__hiden {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
   position: absolute;
   width: 265px;
   height: 300px;
@@ -408,13 +429,16 @@ nav {
 
 .team__block:hover {
   background-color: #3a454d;
+  transition: all 0.5s ease-in-out;
 }
 .team__block:hover .team__hiden {
-  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 .team__block:hover .team_name h4,
 .team__block:hover .team_vacance p {
   color: #d7d8d9;
+  transition: all 1s ease-out;
 }
 .hidden_icon {
   display: inline-block;
@@ -432,9 +456,15 @@ nav {
   text-align: center;
   margin: 20px -10px;
 }
+.foto__file {
+  transition: 1s;
+}
 /*.block_foto {
 	margin-bottom: 20px;
 }*/
+.foto__item:hover .foto__file {
+  transform: scale(1.1);
+}
 .slider_botton_1 {
   padding: 40px 0 60px 0;
 }
@@ -485,6 +515,11 @@ nav {
   width: 25%;
   text-align: center;
   padding: 0 15px 67px 15px;
+  transition: 0.8s;
+}
+
+.tool__block:hover {
+  transform: scale(1.2);
 }
 .tool__pic {
   padding: 30px 0;
@@ -603,6 +638,7 @@ textarea {
   bottom: 0;
   left: 0;
 }
+/* ==================================     footer     ============================ */
 
 .footer {
   height: 95px;
@@ -615,19 +651,25 @@ textarea {
   color: #f5f6f6;
 }
 .footer__icon {
-  height: 48px;
-  text-align: center;
-}
-/* .footer__icon a {
-	height: 48px;
-	width:48px;
-	text-align:center;
-} */
-/* =============================================Пробую вставить спрайт========================================================= */
-.sprite-icon {
-  display: inline-block;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
   margin-top: 20px;
+}
+.footer__icon__block {
+  width: 48px;
+  height: 48px;
+  align-items: center;
+}
+.footer__icon__block:hover .sprite-icon {
+  transform: scale(1.2);
+}
+/* =============================================Пробую вставить спрайт========================================================= */
+
+.sprite-icon {
+  display: block;
   background: url(../img/sprite/sprites.png) no-repeat;
+  transition: 0.7s;
 }
 .icon-bh {
   width: 48px;

@@ -1,0 +1,174 @@
+/* body {
+  font-family: "Playfair Display", serif;
+  margin: 0;
+}
+.wrap {
+  text-align: center;
+}
+.container {
+  display: inline-block;
+}
+h1 {
+  color: #3a262f;
+  font-weight: normal;
+  text-align: center;
+}
+kbd {
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.box {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin: 20px 50px 0;
+}
+.wrap:hover .box {
+  -webkit-transform: scale(2);
+  -ms-ransform: scale(2);
+  transform: scale(2);
+}
+.box1 {
+  background: #ffd592;
+  transition: 0.5s;
+}
+.box2 {
+  background: #f9a88b;
+  transition: 1s;
+}
+.box3 {
+  background: #b39190;
+  transition: 2s;
+} */
+
+/*For IE CSS3 transition property works starting IE10*/
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Playfair Display", serif;
+  margin: 0;
+  text-align: center;
+}
+h1 {
+  font-weight: normal;
+  color: #6a5953;
+}
+kbd {
+  font-size: 0.9em;
+  display: inline-block;
+  line-height: 1.1;
+}
+.box {
+  width: 50%;
+  margin: 0 auto 40px;
+  position: relative;
+}
+div,
+h2,
+img {
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+h2 {
+  color: #e39f81;
+  text-shadow: 1px 1px 0 #ffe3bd;
+}
+h2:hover {
+  text-shadow: 1px 1px 0 #ffe3bd, 2px 2px 0 #ffe3bd, 3px 3px 0 #ffe3bd,
+    4px 4px 0 #ffe3bd, 5px 5px 0 #ffe3bd;
+}
+.one,
+.two,
+.three {
+  border: 5px solid transparent;
+  width: 200px;
+  height: 100px;
+  margin: 0 auto;
+  padding: 10px;
+}
+.one {
+  background-color: #b0cbc4;
+}
+.one:hover {
+  border: 5px solid #b0cbc4;
+  background-color: #f2ebd8;
+  border-top-left-radius: 100% 20px;
+  border-bottom-right-radius: 100% 20px;
+}
+.two {
+  background-color: #9f908f;
+}
+.two:hover {
+  border: 5px inset #9f908f;
+  background-color: #e0cabb;
+}
+.three {
+  background-color: #fbe2a9;
+  border: 5px solid #ffd18f;
+  outline: 5px solid transparent;
+}
+.three:hover {
+  outline: 5px solid #9e8463;
+  outline-offset: 5px;
+}
+.four {
+  width: 200px;
+  height: 100px;
+  background-color: #95a1b1;
+  margin: 0 auto;
+}
+.four:hover {
+  width: 250px;
+  height: 80px;
+  box-shadow: 0 15px 15px -10px rgba(0, 0, 0, 0.5);
+}
+.five {
+  width: 100px;
+  height: 100px;
+  background-color: #e0cabb;
+  margin: 0 auto;
+  position: relative;
+  left: 50px;
+}
+.five:hover {
+  left: -50px;
+}
+img {
+  width: 100%;
+  display: block;
+}
+img:hover {
+  opacity: 0.5;
+}
+.six {
+  width: 200px;
+  height: 100px;
+  margin: 0 auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 -2px 4px rgba(0, 0, 0, 0.2);
+  background: url("https://html5book.ru/wp-content/uploads/2015/01/border-flower.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+.six:hover {
+  background-position: top center;
+}
+.seven {
+  width: 300px;
+  height: 100px;
+  margin: 0 auto;
+  background-color: white;
+  background-image: -webkit-radial-gradient(
+    #9ed8d3 2px,
+    rgba(255, 0, 0, 0) 3px
+  );
+  background-image: -o-radial-gradient(#9ed8d3 2px, rgba(255, 0, 0, 0) 3px);
+  background-image: radial-gradient(#9ed8d3 2px, transparent 3px);
+  background-size: 10px 10px;
+}
+.seven:hover {
+  background-size: 20px 20px;
+}

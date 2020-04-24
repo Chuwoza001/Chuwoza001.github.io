@@ -1,7 +1,7 @@
-		//add slick slider
+//add slick slider
 
-$('.slider-block').slick({
-    autoplay:true,
-    autoplaySpeed:10000,
-    dots:true,
+$(".slider-block").slick({
+  autoplay: true,
+  autoplaySpeed: 2000,
+  dots: true,
 });
